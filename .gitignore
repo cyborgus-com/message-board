@@ -1,0 +1,22 @@
+# Dependencies
+node_modules/
+/dist
+/build
+
+# Logs and temporary files
+*.log
+npm-debug.log*
+yarn-error.log*
+*.tgz
+
+# Environment variables
+.env
+.env.development.local
+.env.test.local
+.env.production.local
+
+# IDE/OS specific files
+.DS_Store
+.nyc_output/
+coverage/
+.vscode/
