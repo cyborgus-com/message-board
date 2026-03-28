@@ -1,17 +1,7 @@
 const express = require("express");
-const router = express("router");
+const router = express.Router();
+const { getMessages } = require("../controllers/messageController");
 
-const messages = [
-  {
-    text: "Hi there!",
-    user: "Amando",
-    added: new Date(),
-  },
-  {
-    text: "Hello World!",
-    user: "Charles",
-    added: new Date(),
-  },
-];
+router.get("/", getMessages);
 
-const indexRouter;
+module.exports = router;

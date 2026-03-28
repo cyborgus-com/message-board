@@ -1,0 +1,90 @@
+<!-- <html>
+    <body>
+        <ul>
+            <% messages.forEach((message) => { %>
+                <div>
+                <div>User: <%= message.user%></div>
+                <p>Text: <%= message.text%></p>
+                <p>Date: <%= message.added%></p>
+                </div>
+            <% }) %>
+        </ul>
+    </body>
+</html> -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Messages</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+
+        h1 {
+            color: #333;
+            text-align: center;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        li {
+            background: white;
+            padding: 10px;
+            margin: 5px 0;
+            border-left: 4px solid #007bff;
+            border-radius: 4px;
+        }
+
+        .message-item {
+            background: white;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 4px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        }
+
+        .user {
+            font-weight: bold;
+            color: #007bff;
+        }
+
+        .text {
+            color: #555;
+            margin: 8px 0;
+        }
+
+        .date {
+            font-size: 12px;
+            color: #999;
+        }
+    </style>
+</head>
+<body>
+    <h1>Messages</h1>
+    <ul>
+        <% messages.forEach((message) => { %>
+            <div class="message-item">
+                <div class="user">
+                    <%= message.user %>
+                </div>
+                <div class="text">
+                    <%= message.text %>
+                </div>
+                <div class="date">
+                    <%= message.added.toLocaleString() %>
+                </div>
+            </div>
+        <% }) %>
+    </ul>
+</body>
+</html>
