@@ -14,6 +14,9 @@ app.use(express.json());
 const messageRoutes = require("./routes/indexRoute");
 app.use("/", messageRoutes);
 
+const newMessageRoute = require("./routes/newRoute");
+app.use("/new", newMessageRoute);
+
 app.listen(process.env.PORT, () => {
   console.log(`Server running on port ${process.env.PORT}`);
 });

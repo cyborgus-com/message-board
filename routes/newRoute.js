@@ -1,7 +1,7 @@
 const express = require("express");
 const router = express.Router();
-// const { getMessages } = require("../controllers/messageController");
+const { submitForm } = require("../controllers/messageSubmitter");
 
-router.get("/new", getMessages);
+router.get("/new", submitForm);
 
 module.exports = router;
