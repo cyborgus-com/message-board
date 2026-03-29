@@ -12,7 +12,15 @@ const messages = [
 ];
 
 async function getAllMessages() {
-  return messages;
+  return messages.sort((a, b) => b.added - a.added);
 }
 
-module.exports = { getAllMessages };
+function addMessage(user, text) {
+  messages.push({
+    text: text,
+    user: user,
+    added: new Date(),
+  });
+}
+
+module.exports = { getAllMessages, addMessage };
